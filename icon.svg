@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DSH Dev Context">
+  <rect width="64" height="64" rx="15" fill="#1f3b8f"/>
+  <path d="M16 18h18l10 10v22a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V22a4 4 0 0 1 4-4z" fill="#eaf0ff"/>
+  <path d="M34 18v10h10" fill="none" stroke="#1f3b8f" stroke-width="2.5" stroke-linejoin="round"/>
+  <g stroke="#1f3b8f" stroke-width="2.6" stroke-linecap="round">
+    <path d="M20 36h20"/>
+    <path d="M20 42h20"/>
+    <path d="M20 48h12"/>
+  </g>
+  <circle cx="47" cy="47" r="10" fill="#4fd1a5"/>
+  <path d="M43 47l3 3 6-6" fill="none" stroke="#0d2a4a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

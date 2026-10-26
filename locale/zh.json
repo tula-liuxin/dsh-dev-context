@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH 开发上下文",
+    "description": "把本机安装的 DSH 投影成一份带版本戳的小索引，版本变化时自动重建；供任何 AI harness 了解如何为 DSH 开发。"
+  }
+}

@@ -1,0 +1,6 @@
+- insert:
+    - id: dsh-dev-context
+      name: 'dsh-dev-context'
+      config:
+        contextDir: ''
+        autoRefresh: true

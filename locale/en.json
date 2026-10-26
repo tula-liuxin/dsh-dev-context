@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH Dev Context",
+    "description": "Keeps a small, version-stamped index of how to develop for the installed DeepSeek Harness, rebuilt when the local DSH version changes."
+  }
+}
