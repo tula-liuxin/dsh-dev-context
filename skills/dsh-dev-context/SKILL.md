@@ -16,7 +16,9 @@ Open:
 - Windows: `%USERPROFILE%\.dsh\dev-context\INDEX.md`
 - macOS/Linux: `~/.dsh/dev-context/INDEX.md`
 
-It is small (about 100 lines). It contains the version key, five mental models, and a "task → authoritative file" table whose paths are absolute and point into the readable DSH installation.
+It is small (about 60 lines). It contains the version key, five mental models, and a "task → authoritative file" table whose paths are absolute and point into the readable DSH installation.
+
+A copy of this skill sits next to it as `SKILL.md`; the index is the map, this file is the bootstrap.
 
 ## 2. If it is missing or stale
 
@@ -25,6 +27,8 @@ Regenerate it:
 ```
 node <dsh-dev-context>/scripts/check.mjs --update
 ```
+
+`INDEX.md` names the absolute path of this script (section "怎么用", item 5) — prefer that over guessing the plugin location.
 
 Typical locations of `<dsh-dev-context>`:
 
