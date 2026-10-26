@@ -31,6 +31,14 @@ plugin_manager install_bundle  target: <本仓库绝对路径>
 
 或由市场安装。安装后无需重启：插件激活时会检查并重建索引。
 
+## 插件详情页入口
+
+安装后，在「插件 → DSH 开发上下文」详情页底部会多出一个 section（走官方的 `plugins.detail.section` 扩展位）：
+
+- 直接展示 `%USERPROFILE%\.dsh\dev-context\SKILL.md` 和 macOS/Linux 的 `~/.dsh/dev-context/SKILL.md`；
+- 「复制给 AI」按钮复制一段可直接粘给其他 harness 的指令（含路径与用途）；
+- 另附同一 skill 的 GitHub raw 链接，方便跨机器使用。
+
 ## 配置
 
 在 profile 的 `cordis.patch.yml` 覆盖 `dsh-dev-context` 行：
@@ -89,5 +97,6 @@ npm run check   # 三个入口文件的语法检查
 
 ## 变更记录
 
+- **0.2.0** — 增加 Web client 半边：在插件详情页底部（`plugins.detail.section`）提供 skill 路径与「复制给 AI」按钮。
 - **0.1.1** — 索引因以下任一项重建：插件生成器版本、DSH 版本、可读安装位置、引用文件内容 hash、生成物缺失。INDEX 里写入 `check.mjs` 绝对路径与同目录 `SKILL.md` 说明。
 - **0.1.0** — 首个版本：版本键（桌面运行时 + 可读安装）、17 条任务→文件解析、`MISSING` 漂移标记、零依赖检查脚本、内嵌 skill。

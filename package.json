@@ -1,16 +1,18 @@
 {
   "name": "dsh-dev-context",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": false,
   "description": "把本机安装的 DeepSeek Harness 投影成一份带版本戳的小索引；DSH 版本变化时自动重建，供任何 AI harness 读取。",
   "type": "module",
   "exports": {
     ".": "./index.js",
+    "./client": "./client.js",
     "./locale/*.json": "./locale/*.json",
     "./icon": "./icon.svg"
   },
   "files": [
     "index.js",
+    "client.js",
     "lib/*.mjs",
     "scripts/*.mjs",
     "skills/dsh-dev-context/SKILL.md",
@@ -22,6 +24,13 @@
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
     }
   },
   "engines": {

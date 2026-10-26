@@ -179,3 +179,15 @@ test('a missing generated artifact is reported as missing', async () => {
     await rm(root, { recursive: true, force: true })
   }
 })
+
+test('the bundle exposes a web client half for the plugin detail page', async () => {
+  const manifest = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'))
+  assert.equal(manifest.exports['./client'], './client.js')
+  assert.ok(manifest.files.includes('client.js'))
+  assert.equal(manifest.dsh.client.platform, 'web')
+  assert.ok(manifest.dsh.client.inject.includes('@deepseek-ai/dsh-client-ui-plugin-manager'))
+  assert.ok(existsSync(new URL('../client.js', import.meta.url)))
+  const source = await readFile(new URL('../client.js', import.meta.url), 'utf8')
+  assert.match(source, /plugins\.detail\.section/)
+  assert.match(source, /dsh-dev-context-skill/)
+})
