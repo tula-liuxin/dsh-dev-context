@@ -1,6 +1,6 @@
 {
   "name": "dsh-dev-context",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "description": "把本机安装的 DeepSeek Harness 投影成一份带版本戳的小索引；DSH 版本变化时自动重建，供任何 AI harness 读取。",
   "type": "module",
@@ -38,7 +38,8 @@
   },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check index.js && node --check lib/context.mjs && node --check scripts/check.mjs"
+    "check": "node --check index.js && node --check lib/context.mjs && node --check scripts/check.mjs",
+    "verify": "npm run check && npm run test"
   },
   "keywords": [
     "deepseek-harness",
